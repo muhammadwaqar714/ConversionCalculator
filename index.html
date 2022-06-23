@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 class=" w-75 text-center text-bg-dark text-info container p-4 rounded-3">Conversion Calculator</h1>
+
+    <div class="main container  w-75  rounded-5 border-3 border-dark" style="background-color:#82E0AA  ;"  >
+
+ 
+
+
+<!-- KG to Pounds  -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>kilogram to Pounds</h2>
+            <br>
+            <div class="form-group">
+                <label for="kg"><h4>Kg</h4></label>
+                <input type="number" min="0" value="1" id="kg" class="form-control" placeholder="" aria-describedby="helpId">
+                <small id="helpId" class="text-muted">Enter in kilogram</small>
+            </div>
+            <div class="form-group">
+                <h5>Result:<span id="res"></span></h5>
+            </div> 
+            <div class="form-group">
+                <button type="button" id="convert" class="btn btn-primary" >Convert to Pounds</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <br>
+
+
+
+<!-- Km To Miles -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Kilometer to Miles</h2>
+                <br>
+                <div class="form-group">
+                    <label for="km"><h4>Kilometer</h4></label>
+                    <input type="number" min="0" value="1" id="km" class="form-control" placeholder="" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Enter in kilometers</small>
+                </div>
+                <div class="form-group">
+                    <h5>Result:<span id="MileRes"></span></h5>
+                </div> 
+                <div class="form-group">
+                    <button type="button" id="convertToMiles" class="btn btn-primary" >Convert to Miles</button>
+                </div>
+            </div>
+        </div>
+      </div>
+<br>
+      <!-- Fahrenheit to Celsius -->
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Fahrenheit to Celsius</h2>
+                <br>
+                <div class="form-group">
+                    <label for="fh"><h4>Fahrenheit</h4></label>
+                    <input type="number" min="0" value="1" id="fh" class="form-control" placeholder="" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Enter in Fahrenheit</small>
+                </div>
+                <div class="form-group">
+                    <h5>Result:<span id="CelsRes"></span></h5>
+                </div> 
+                <div class="form-group">
+                    <button type="button" id="convertToCel" class="btn btn-primary" >Convert to Celsius</button>
+                </div>
+                <br>
+            </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+<!-- JS Code startr here -->
+<script>
+
+
+// ---------------------- Convert kg to pounds ----------------------
+
+document.getElementById("convert").onclick = function() {
+        var kg = document.getElementById("kg").value;
+        var pounds =  kg * 2.2046
+        pounds = pounds.toFixed(4);
+        document.getElementById("res").innerHTML = ' ' + pounds + ' pounds'; 
+        document.getElementById("res").style.background="#FFC300"
+      }
+
+
+
+
+    // ----------------------Convert km to miles----------------------
+
+    document.getElementById("convertToMiles").onclick = function() {
+        var km = document.getElementById("km").value;
+        var miles = km / 1.609;
+        miles = miles.toFixed(4);
+        document.getElementById("MileRes").innerHTML = ' ' + miles + ' miles'; 
+        document.getElementById("MileRes").style.background="#FFC300"
+      }
+
+
+    // ----------------------Convert Fahrenheit to Celsius----------------------
+    
+    document.getElementById("convertToCel").onclick = function() {
+        var fh = document.getElementById("fh").value;
+        var cels =(fh-32)/1.8;
+       cels = cels.toFixed(4);
+        document.getElementById("CelsRes").innerHTML = ' ' + cels + ' Celsius'; 
+        document.getElementById("CelsRes").style.background="#FFC300"
+
+      }
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
